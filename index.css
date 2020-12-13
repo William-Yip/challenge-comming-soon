@@ -14,6 +14,7 @@ body {
 main {
   display: flex;
   height: 100vh;
+  margin-bottom: 80px;
 }
 
 .left {
@@ -21,7 +22,7 @@ main {
   background-image: url("./images/bg-pattern-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 15%;
+  padding: 0 80px;
 }
 
 .right {
@@ -37,11 +38,23 @@ main {
   width: 200px;
 }
 
+.bg-mobile {
+  display: none;
+}
+
 h1 {
   text-transform: uppercase;
   font-size: 60px;
   letter-spacing: 10px;
   line-height: 1.2;
+  animation: ease .5s coming forwards;
+  transform: translateX(-100%);
+}
+
+@keyframes coming {
+  to {
+    transform: translateX(0);
+  }
 }
 
 h1 span {
@@ -57,6 +70,7 @@ p {
 
 form {
   position: relative;
+  padding-bottom: 80px;
 }
 
 input {
@@ -106,4 +120,22 @@ small {
   display: none;
   padding: 15px;
   color: hsl(0, 93%, 68%);
+}
+
+@media screen and ( max-width: 720px ) {
+
+  .left {
+    width: 100%;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .bg-mobile { 
+    display: inline-block;
+    width: calc( 100% + 160px );
+    margin-left: -80px;
+  }
+
 }
