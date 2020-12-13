@@ -14,7 +14,6 @@ body {
 main {
   display: flex;
   height: 100vh;
-  margin-bottom: 80px;
 }
 
 .left {
@@ -23,6 +22,10 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 0 80px;
+}
+
+.container-content {
+  width: 60%;
 }
 
 .right {
